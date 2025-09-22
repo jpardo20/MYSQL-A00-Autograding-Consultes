@@ -1,0 +1,1 @@
+-- TODO: SELECT c.nom AS nom_curs, ROUND(AVG(m.notaFinal), 2) AS mitjana FROM ... GROUP BY c.nom ORDER BY c.nom ASC;

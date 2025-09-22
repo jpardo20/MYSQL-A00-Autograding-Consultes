@@ -1,0 +1,20 @@
+assignments:
+  - title: "MYSQL-A00"
+    autograding:
+      tests:
+        - name: "Q1 — Assignatures 1r de DAM"
+          run: |
+            sudo apt-get update && sudo apt-get install -y mysql-client
+            mysql -h 127.0.0.1 -uroot -proot < schema.sql
+            mysql -h 127.0.0.1 -uroot -proot < data.sql
+            mysql -h 127.0.0.1 -uroot -proot --database=institut -B -N < solutions/q1.sql > actual1.tsv
+            diff -u expected/q1.tsv actual1.tsv
+          points: 1
+        - name: "Q2 — Mitjana per curs"
+          run: |
+            sudo apt-get update && sudo apt-get install -y mysql-client
+            mysql -h 127.0.0.1 -uroot -proot < schema.sql
+            mysql -h 127.0.0.1 -uroot -proot < data.sql
+            mysql -h 127.0.0.1 -uroot -proot --database=institut -B -N < solutions/q2.sql > actual2.tsv
+            diff -u expected/q2.tsv actual2.tsv
+          points: 1

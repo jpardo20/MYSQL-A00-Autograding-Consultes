@@ -1,0 +1,4 @@
+# MySQL dumps / temps
+*.sql~
+*.tsv~
+*.log
